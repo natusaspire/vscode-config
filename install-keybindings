@@ -1,0 +1,20 @@
+#!/bin/bash
+
+readonly KEYBINDINGS_FILENAME='keybindings.json'
+
+readonly WINDOWS_KEYBINDINGS_FILE="$APPDATA/Code/User/$KEYBINDINGS_FILENAME"
+readonly MACOS_KEYBINDINGS_FILE="$HOME/Library/Application Support/Code/User/$KEYBINDINGS_FILENAME"
+readonly LINUX_KEYBINDINGS_FILE="$HOME/.config/Code/User/$KEYBINDINGS_FILENAME"
+
+readonly SUCCESS_MESSAGE='Keybindings installed'
+readonly ERROR_MESSAGE='Keybindings file not found'
+
+if [[ -f "$WINDOWS_KEYBINDINGS_FILE" ]]; then
+  cat $KEYBINDINGS_FILENAME > "$WINDOWS_KEYBINDINGS_FILE" && echo $SUCCESS_MESSAGE
+elif [[ -f "$MACOS_KEYBINDINGS_FILE" ]]; then
+  cat $KEYBINDINGS_FILENAME > "$MACOS_KEYBINDINGS_FILE" && echo $SUCCESS_MESSAGE
+elif [[ -f "$LINUX_KEYBINDINGS_FILE" ]]; then
+  cat $KEYBINDINGS_FILENAME > "$LINUX_KEYBINDINGS_FILE" && echo $SUCCESS_MESSAGE
+else
+  echo $ERROR_MESSAGE
+fi
