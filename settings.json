@@ -1,0 +1,49 @@
+{
+  "window.zoomLevel": 0,
+  "window.menuBarVisibility": "toggle",
+  "editor.renderWhitespace": "all",
+  "editor.renderControlCharacters": true,
+  "editor.minimap.enabled": false,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.rulers": [79, 99, 119],
+  "files.insertFinalNewline": true,
+  "files.eol": "\n",
+  "files.exclude": {
+    "**/node_modules": true
+  },
+  "workbench.panel.defaultLocation": "right",
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.activityBar.visible": true,
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "breadcrumbs.enabled": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[python]": {
+    "editor.tabSize": 4
+  },
+  "[csharp]": {
+    "editor.tabSize": 4
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "prettier.singleQuote": true,
+  "prettier.arrowParens": "avoid"
+}

@@ -1,0 +1,20 @@
+#!/bin/bash
+
+readonly SETTINGS_FILENAME='settings.json'
+
+readonly WINDOWS_SETTINGS_FILE="$APPDATA/Code/User/$SETTINGS_FILENAME"
+readonly MACOS_SETTINGS_FILE="$HOME/Library/Application Support/Code/User/$SETTINGS_FILENAME"
+readonly LINUX_SETTINGS_FILE="$HOME/.config/Code/User/$SETTINGS_FILENAME"
+
+readonly SUCCESS_MESSAGE='Settings installed'
+readonly ERROR_MESSAGE='Settings file not found'
+
+if [[ -f "$WINDOWS_SETTINGS_FILE" ]]; then
+  cat $SETTINGS_FILENAME > "$WINDOWS_SETTINGS_FILE" && echo $SUCCESS_MESSAGE
+elif [[ -f "$MACOS_SETTINGS_FILE" ]]; then
+  cat $SETTINGS_FILENAME > "$MACOS_SETTINGS_FILE" && echo $SUCCESS_MESSAGE
+elif [[ -f "$LINUX_SETTINGS_FILE" ]]; then
+  cat $SETTINGS_FILENAME > "$LINUX_SETTINGS_FILE" && echo $SUCCESS_MESSAGE
+else
+  echo $ERROR_MESSAGE
+fi

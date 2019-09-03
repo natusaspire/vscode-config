@@ -1,0 +1,7 @@
+#!/bin/bash
+
+readonly EXTENSIONS_FILENAME='extensions.list'
+
+readonly SUCCESS_MESSAGE='Extension list updated'
+
+code --list-extensions > $EXTENSIONS_FILENAME && echo $SUCCESS_MESSAGE
